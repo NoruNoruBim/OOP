@@ -10,6 +10,13 @@ Octagon::Octagon() : side(0), number(8) {
         std::cout << "Input error. ";
     } else {std::cout << "-Octagon has created.-" << std::endl;}
 }
+Octagon::Octagon(std::istream &is) {
+    is >> this->side;
+}
+Octagon::Octagon(const Octagon& orig) {
+    std::cout << "Octagon copy created" << std::endl;
+    this->side = orig.side;
+}
 
 double Octagon::Square() {
     double tmp = (8 * side * side) / (4 * tan((2 * pi) / 16));
