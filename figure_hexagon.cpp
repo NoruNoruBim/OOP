@@ -10,6 +10,13 @@ Hexagon::Hexagon() : side(0), number(6) {
         std::cout << "Input error. ";
     } else {std::cout << "-Hexagon has created.-" << std::endl;}
 }
+Hexagon::Hexagon(std::istream &is) {
+    is >> this->side;
+}
+Hexagon::Hexagon(const Hexagon& orig) {
+    std::cout << "Hexagon copy created" << std::endl;
+    this->side = orig.side;
+}
 
 double Hexagon::Square() {
     double tmp = (6 * side * side) / (4 * tan((2 * pi) / 12));
