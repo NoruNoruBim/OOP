@@ -10,6 +10,13 @@ Pentagon::Pentagon() : side(0), number(5) {
         std::cout << "Input error. ";
     } else {std::cout << "-Pentagon has created.-" << std::endl;}
 }
+Pentagon::Pentagon(std::istream &is) {
+    is >> this->side;
+}
+Pentagon::Pentagon(const Pentagon& orig) {
+    std::cout << "Pentagon copy created" << std::endl;
+    this->side = orig.side;
+}
 
 double Pentagon::Square() {
     double tmp = (5 * side * side) / (4 * tan((2 * pi) / 10));
