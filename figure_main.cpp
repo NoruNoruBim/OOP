@@ -8,7 +8,6 @@
 int main()
 {
     short int number = 0;
-    //double length = 0;
 
     std::cout << "Write number of sides and their length. This polygon must be regular." << std::endl;
     std::cout << "Number:" << std::endl;
