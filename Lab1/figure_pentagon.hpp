@@ -3,15 +3,16 @@
 
 #include <cstdlib>
 #include <iostream>
+#include "figure.hpp"
 
-class Pentagon {
+class Pentagon : Figure {
     public:
         Pentagon();
         Pentagon(std::istream &is);
         Pentagon(const Pentagon& orig);
 
-        double Square();
-        void Print();
+        double Square() override;
+        void Print() override;
 
         friend std::ostream& operator<<(std::ostream& os, const Pentagon& obj);
         friend std::istream& operator>>(std::istream& is, Pentagon& obj);
