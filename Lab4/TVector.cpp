@@ -24,7 +24,7 @@ template <class T> void TVector<T>::Add(std::shared_ptr<T>& element) {
 }
 
 template <class T> void TVector<T>::Resize(int new_size) {//      control of size is not common
-    this->data = (std::shared_ptr<TVectorItem<T>>*)realloc(this->data, sizeof(Pentagon) * new_size);// PENTAGON - WTF???
+    this->data = (std::shared_ptr<TVectorItem<T>>*)realloc(this->data, sizeof(Pentagon) * new_size);
 }
 
 template <class T> void TVector<T>::Delete_node(int i) {//      shift and resize (and size--)
